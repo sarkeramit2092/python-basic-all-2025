@@ -1,9 +1,16 @@
 # python-basic-all-2025
 
-- Four Pillars of OOP
-- Python OOP Essentials
-- Handling files and exceptions
-- functions, lambda and file handling
-- map, filter and reduce
-- Loops and Build in data Structure
-- String and conditional statement
+# master in the syntax
+     - Put a ton of volume into your practice.
+# how to solve problem
+     - Hackerrank.com | Leetcode.com | Freecodecamp.com
+
+# focusing on 
+   - function | storage | looping
+
+- Look Theory
+- Do some problem solving on it
+- If required take help
+
+# Build Project!!
+# Make your own project.
