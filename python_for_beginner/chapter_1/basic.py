@@ -39,3 +39,14 @@ print (name2)
 name3 = ""
 name3 = bool (name3)
 print (name3)
+
+
+# input()
+
+name = input ("What is your Name?: ")
+print (f"Hello {name}")
+
+age = int(input("How old are your?: "))
+age = age + 1
+print(f"You are {age} years old.")
+
