@@ -19,35 +19,52 @@ if response == "Y":
 else:
    print("No food for you!")
 
-# python calculator
+# Python Calculator
 
-operator = input("Enter an operator (+ - * /): ")
+operator = input("Enter an operator (+, -, *, /): ")
 
 # Validate first number
 while True:
     try:
         num1 = float(input("Enter the 1st number: "))
-        if num1 == 0:
-            print("Enter a valid number!!")
-            continue
         break
     except ValueError:
-        print("Please enter a valid integer!")
+        print("Please enter a valid number!")
 
 # Validate second number
 while True:
     try:
         num2 = float(input("Enter the 2nd number: "))
+        if operator == "/" and num2 == 0:  # Prevent division by zero
+            print("Division by zero is not allowed! Enter a different number.")
+            continue
         break
     except ValueError:
-        print("Please enter a valid integer!")
+        print("Please enter a valid number!")
 
+# Perform Calculation
 if operator == "+":
-    print(f"The Addition of {num1} and {num2} is: {num1 + num2}")
+    print(f"The Addition of {num1} and {num2} is: {num1 + num2:.3f}")
 elif operator == "-":
-    print(f"The Subtraction of {num1} and {num2} is: {num1 - num2}")
+    print(f"The Subtraction of {num1} and {num2} is: {num1 - num2:.3f}")
 elif operator == "*":
-    print(f"The Multiplication of {num1} and {num2} is: {num1 * num2}")
+    print(f"The Multiplication of {num1} and {num2} is: {num1 * num2:.3f}")
+elif operator == "/":
+    print(f"The Division of {num1} and {num2} is: {num1 / num2:.3f}")
 else:
-    print(f"The Division of {num1} and {num2} is: {num1/num2}")
-    
+    print(f"{operator} is not a valid operator!")
+
+
+# Weight Converter
+
+weight = float(input("Enter your weight: "))
+unit = input("Kilograms or Pounds? (K or L): ").upper()
+
+if unit == "K":
+    converted_weight = weight * 2.20462
+    print(f"{weight} kilograms is equal to {converted_weight:.2f} pounds.")
+elif unit == "L":
+    converted_weight = weight / 2.20462
+    print(f"{weight} pounds is equal to {converted_weight:.2f} kilograms.")
+else:
+    print("Invalid input! Please enter 'K' for Kilograms or 'L' for Pounds.")
