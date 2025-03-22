@@ -66,4 +66,13 @@ print("Sum:", s, "Product:", p)  # Output: Sum: 7 Product: 12
 - Functions **without `return`** return `None` by default.
 - Python allows **multiple return values** using tuples.
 
+# Important
+
+![why return](image-2.png)
+
+Here, nothing return back to the result. This print is just a console display; nothing functional.
+So, print(result) gives us None.
+
+
+
 
